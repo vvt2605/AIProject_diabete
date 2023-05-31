@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
+import { Schema, Model } from 'mongoose'
 
-const schema = mongoose.Schema
+const schema = Schema
 
 const diabete = new schema({
     pregnancy:Number,
@@ -12,5 +12,5 @@ const diabete = new schema({
     bloodPresure:Number,
     height:{typeof : Number, default :170}
 })
-module.exports = mongoose.Model('diabete',diabete)
+export default Model('diabete',diabete)
 
