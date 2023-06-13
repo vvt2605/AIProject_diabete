@@ -1,5 +1,4 @@
 
-
 class controllers{
     home(req,res,next){
         res.render('home')
@@ -36,3 +35,4 @@ class controllers{
 }
 
 module.exports = new controllers
+

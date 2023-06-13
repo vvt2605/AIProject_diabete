@@ -8,6 +8,7 @@ from sklearn.model_selection import cross_val_score
 
 df= pd.read_csv('src/diabetes.csv')
 
+
 test1File = open('src/test.csv','w')
 test1File.write('Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age\n')
 
