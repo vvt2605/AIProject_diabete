@@ -20,63 +20,101 @@
         display: flex;
         flex-direction: column;
     }
+
     .mb-3 {
         width: 40%;
     }
+
     .inputForm {
-        display: flex;;
+        display: flex;
+        ;
         justify-content: space-between;
     }
-    .btn_submit {
-
+    .resultBox {
+        position: absolute;
+        right: 10%;
+        bottom: 25%;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        
     }
+    .resultText {
+font-style: inherit;
+        font-weight: 400;
+    }
+    .titleResultText {
+        font-style: inherit;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    .titleResult {
+margin-right: 15%;
+    width: 250px;
+    }
+        
 </style>
 <div class="formtext">
-    
+
     <form class="form" method="post" name="formforsub">
         <div class="inputForm">
             <div class="mb-3">
-                <label for="pregnancy" class="form-label">Pregnancies  Yes(1)-No(0)</label>
-                <input type="text" class="form-control" placeholder="Enter Pregnancies " id="pregnancy" aria-describedby="emailHelp" name="pregnancy">
+                <label for="pregnancy" class="form-label">Pregnancies Yes(1)-No(0)</label>
+                <input type="text" class="form-control" placeholder="Enter Pregnancies " id="pregnancy"
+                    aria-describedby="emailHelp" name="pregnancy">
             </div>
             <div class="mb-3">
                 <label for="Glucozo" class="form-label">Glucose (mg/dl)</label>
                 <input type="text" class="form-control" id="Glucozo" name="glucozo" placeholder="Enter Glucose">
             </div>
         </div>
-        
-            
+
+
         <div class="inputForm">
-           <div class="mb-3">
+            <div class="mb-3">
                 <label for="insulin" class="form-label">Insulin</label>
                 <input type="text" class="form-control" id="insulin" name="insulin" placeholder="Enter Insulin">
             </div>
             <div class="mb-3">
-            <label for="bloodPressure" class="form-label">Blood Pressure</label>
-            <input type="text" class="form-control" id="bloodPressure" name="bloodPressure" placeholder="Enter Blood Pressure">
+                <label for="bloodPressure" class="form-label">Blood Pressure</label>
+                <input type="text" class="form-control" id="bloodPressure" name="bloodPressure"
+                    placeholder="Enter Blood Pressure">
+            </div>
         </div>
-        </div>
-         <div class="inputForm">
+        <div class="inputForm">
             <div class="mb-3">
-            <label for="age" class="form-label">Age</label>
-            <input type="text" class="form-control" id="age" name="age" placeholder="Enter Age">
+                <label for="age" class="form-label">Age</label>
+                <input type="text" class="form-control" id="age" name="age" placeholder="Enter Age">
+            </div>
+            <div class="mb-3">
+                <label for="height" class="form-label">Height(cm)</label>
+                <input type="text" class="form-control" id="height" name="height" placeholder="Enter Height">
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="height" class="form-label">Height(cm)</label>
-            <input type="text" class="form-control" id="height" name="height" placeholder="Enter Height">
-        </div>
-        </div>
-         <div class="inputForm">
-           <div class="mb-3">
-            <label for="weight" class="form-label">Weight(kg)</label>
-            <input type="text" class="form-control" id="weight" name="weight" placeholder="Enter Weight">
-        </div>
-        
+        <div class="inputForm">
+            <div class="mb-3">
+                <label for="weight" class="form-label">Weight(kg)</label>
+                <input type="text" class="form-control" id="weight" name="weight" placeholder="Enter Weight">
+            </div>
+            <div class="titleResult">
+                <p class="titleResultText">See the results below: </p>
+            </div>
+
         </div>
         <button type="submit" class="btn btn-primary btn_submit ">Submit</button>
 
-        
+
     </form>
-    
+    <div class="resultBox" >
+        {{#if Rresult}}
+        <h3 class="resultText">=> You do not have diabetes </h3>
+        <h3 class="resultText">=> That's about {{subtr 100 result2}}%</h3>
+        {{else }}
+        <h3 class="resultText">=> You do not have diabetes </h3>
+        <h3 class="resultText">=> That's about{{result2}}%</h3>
+        {{/if}}
+    </div>
+
 
 </div>
