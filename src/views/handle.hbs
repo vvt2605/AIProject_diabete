@@ -34,26 +34,38 @@
     .resultBox {
         position: absolute;
         right: 10%;
-        bottom: 25%;
-        width: 30%;
+        bottom: 20%;
+        width: 40%;
         justify-content: center;
         align-items: center;
-        height: 100px;
-        background-image: url(../public/img/background-don-sac-anime_101110161.jpg) ;
-        
+        height: 124px;
+        background-color: azure;
+        border-radius: 16px;
+}
+
+
     }
     .resultText {
-font-style: inherit;
-        font-weight: 400;
+       font-size: x-large;  
+        font-weight: 300;
+        font-style: italic  ;
+        font-family: cursive; 
     }
     .titleResultText {
         font-style: inherit;
         font-weight: 600;
-        font-size: 24px;
+        font-size: 24px;    
+                font-family: cursive; 
+
     }
     .titleResult {
 margin-right: 15%;
     width: 250px;
+            font-family: cursive; 
+
+    }
+    .form-label {
+        color: white;
     }
 
 </style>
@@ -99,7 +111,7 @@ margin-right: 15%;
                 <input type="text" class="form-control" id="weight" name="weight" placeholder="Enter Weight">
             </div>
             <div class="titleResult">
-                <p class="titleResultText">See the results below: </p>
+                {{!-- <p class="form-label titleResultText">See the results below: </p> --}}
             </div>
 
         </div>
@@ -109,11 +121,13 @@ margin-right: 15%;
     </form>
     <div class="resultBox" >
         {{#if Rresult}}
-        <h3 class="resultText">=> You do not have diabetes </h3>
-        <h3 class="resultText">=> That's about {{subtr 100 result2}}%</h3>
+        <h3 class="resultText"style="font-family: cursive;"> Result  </h3>
+        <h3 class="resultText" style="font-family: cursive;">- You do not have diabetes </h3>
+        <h3 class="resultText"style="font-family: cursive;">- That's about {{subtr 100 result2}}%</h3>
         {{else }}
-        <h3 class="resultText">=> You do not have diabetes </h3>
-        <h3 class="resultText">=> That's about{{result2}}%</h3>
+        <h3 class="resultText"style="font-family: cursive;"> Result  </h3>
+        <h3 class="resultText"style="font-family: cursive;"> - You do not have diabetes </h3>
+        <h3 class="resultText"style="font-family: cursive;">- That's about{{result2}}%</h3>
         {{/if}}
     </div>
 

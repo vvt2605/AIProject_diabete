@@ -3,7 +3,12 @@
         margin-left: 10%;
         width: 80%;
     }
-
+    .resultText {
+       font-size: x-large;  
+        font-weight: 300;
+        font-style: italic  ;
+        font-family: cursive; 
+    }
     .formtext {
         display: flex;
         flex-direction: column;
@@ -30,13 +35,16 @@
     .btn_submit {
 
     }
+    .form-label {
+        color: white;
+    }
 </style>
 <div class="formtext">
     
     <form class="form" method="post" name="formforsub">
         <div class="inputForm">
             <div class="mb-3">
-                <label for="pregnancy" class="form-label">Pregnancies  Yes(1)-No(0)</label>
+                <label for="pregnancy" class="form-label">Pregnancies</label>
                 <input type="text" class="form-control" placeholder="Enter Pregnancies " id="pregnancy" aria-describedby="emailHelp" name="pregnancy">
             </div>
             <div class="mb-3">
