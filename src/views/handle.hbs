@@ -11,7 +11,11 @@
 
         align-items: left;
         margin-bottom: 107px;
-        
+
+    }
+
+    .resultText {
+        color: white;
     }
 
     .result {
@@ -20,6 +24,8 @@
         margin-left: 210px;
         display: flex;
         flex-direction: column;
+
+
     }
 
     .mb-3 {
@@ -28,46 +34,51 @@
 
     .inputForm {
         display: flex;
-        ;
+
         justify-content: space-between;
     }
+
     .resultBox {
         position: absolute;
         right: 10%;
         bottom: 20%;
-        width: 40%;
+        width: 32%;
         justify-content: center;
         align-items: center;
-        height: 124px;
-        background-color: azure;
+        height: 144px;
         border-radius: 16px;
-}
+    }
 
 
-    }
-    .resultText {
-       font-size: x-large;  
-        font-weight: 300;
-        font-style: italic  ;
-        font-family: cursive; 
-    }
-    .titleResultText {
-        font-style: inherit;
-        font-weight: 600;
-        font-size: 24px;    
-                font-family: cursive; 
+        {
+            {
+            !-- .resultText {
+                font-size: x-large;
+                font-weight: 300;
+                font-style: italic;
+            }
 
-    }
-    .titleResult {
-margin-right: 15%;
-    width: 250px;
-            font-family: cursive; 
+            .titleResultText {
+                font-style: inherit;
+                font-weight: 600;
+                font-size: 24px;
 
+            }
+
+            .titleResult {
+                margin-right: 15%;
+                width: 250px;
+
+            }
+
+            --
+        }
     }
+
+
     .form-label {
         color: white;
     }
-
 </style>
 <div class="formtext ">
     <form class="form" method="post" name="formforsub">
@@ -101,13 +112,13 @@ margin-right: 15%;
                 <input type="text" class="form-control" id="age" name="age" placeholder="Enter Age">
             </div>
             <div class="mb-3">
-                <label for="height" class="form-label">Height(cm)</label>
+                <label for="height" class="form-label">Height (cm)</label>
                 <input type="text" class="form-control" id="height" name="height" placeholder="Enter Height">
             </div>
         </div>
         <div class="inputForm">
             <div class="mb-3">
-                <label for="weight" class="form-label">Weight(kg)</label>
+                <label for="weight" class="form-label">Weight (kg)</label>
                 <input type="text" class="form-control" id="weight" name="weight" placeholder="Enter Weight">
             </div>
             <div class="titleResult">
@@ -119,15 +130,16 @@ margin-right: 15%;
 
 
     </form>
-    <div class="resultBox" >
+    <div class="resultBox">
         {{#if Rresult}}
-        <h3 class="resultText"style="font-family: cursive;"> Result  </h3>
-        <h3 class="resultText" style="font-family: cursive;">- You do not have diabetes </h3>
-        <h3 class="resultText"style="font-family: cursive;">- That's about {{subtr 100 result2}}%</h3>
+        <h3 class="resultText"> Result </h3>
+        {{!-- do not --}}
+        <h3 class="resultText">You do not have diabetes </h3>
+        <h3 class="resultText">That's about {{subtr 100 result2}}%</h3>
         {{else }}
-        <h3 class="resultText"style="font-family: cursive;"> Result  </h3>
-        <h3 class="resultText"style="font-family: cursive;"> - You do not have diabetes </h3>
-        <h3 class="resultText"style="font-family: cursive;">- That's about{{result2}}%</h3>
+        <h3 class="resultText"> Result </h3>
+        <h3 class="resultText">You have diabetes </h3>
+        <h3 class="resultText">That's about {{result2}}%</h3>
         {{/if}}
     </div>
 
