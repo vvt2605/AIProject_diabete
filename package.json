@@ -1,0 +1,35 @@
+{
+  "name": "predict_diabete",
+  "version": "1.0.0",
+  "description": "predict diabete",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvt2605/AIProject_diabete.git"
+  },
+  "keywords": [
+    "diabete",
+    "nodejs"
+  ],
+  "author": "ThanhVV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vvt2605/AIProject_diabete/issues"
+  },
+  "homepage": "https://github.com/vvt2605/AIProject_diabete#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "express-handlebars": "^7.1.2",
+    "handlebars": "^4.7.8",
+    "mongoose": "^7.4.4",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  }
+
+}

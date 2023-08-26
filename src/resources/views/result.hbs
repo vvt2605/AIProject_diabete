@@ -1,0 +1,112 @@
+
+<style>
+    .form {
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    .formtext {
+        display: flex;
+        flex-direction: column;
+        justify-items: left;
+
+        align-items: left;
+        margin-bottom: 107px;
+    }
+
+    .result {
+        width: 80%;
+        margin: 30px;
+        margin-left: 210px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mb-3 {
+        width: 40%;
+    }
+
+    .inputForm {
+        display: flex;
+        ;
+        justify-content: space-between;
+    }
+
+    .form-label {
+        color: white;
+    }
+    .title_result {
+        color: white;
+        margin-left: 40%;
+        font-size: larger;
+    }
+</style>
+<div class="formtext">
+
+    <form id="myForm" class="form" method="post" name="formforsub">
+        <div class="inputForm">
+            <div class="mb-3">
+                <label for="pregnancy" class="form-label">Pregnancies</label>
+                <input type="text" class="form-control" placeholder="{{this.pregnancy}}" id="pregnancy"
+                    aria-describedby="emailHelp" name="pregnancy">
+            </div>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender</label>
+                <input type="text" class="form-control" placeholder="Enter Gender " id="gender"
+                    aria-describedby="emailHelp" name="gender">
+            </div>
+
+        </div>
+
+
+        <div class="inputForm">
+            <div class="mb-3">
+                <label for="Glucozo" class="form-label">Glucose (mg/dl)</label>
+                <input type="text" class="form-control" id="glucozo" name="glucozo" placeholder="Enter Glucose">
+            </div>
+            <div class="mb-3">
+                <label for="insulin" class="form-label">Insulin (mu U/ml)</label>
+                <input type="text" class="form-control" id="insulin" name="insulin" placeholder="Enter Insulin">
+            </div>
+
+        </div>
+        <div class="inputForm">
+            <div class="mb-3">
+                <label for="bloodPressure" class="form-label">Blood Pressure (mm Hg)</label>
+                <input type="text" class="form-control" id="bloodPressure" name="bloodPressure"
+                    placeholder="Enter Blood Pressure">
+            </div>
+            <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="text" class="form-control" id="age" name="age" placeholder="Enter Age">
+            </div>
+
+        </div>
+        <div class="inputForm">
+            <div class="mb-3">
+                <label for="height" class="form-label">Height(cm)</label>
+                <input type="text" class="form-control" id="height" name="height" placeholder="Enter Height">
+            </div>
+            <div class="mb-3">
+                <label for="weight" class="form-label">Weight(kg)</label>
+                <input type="text" class="form-control" id="weight" name="weight" placeholder="Enter Weight">
+            </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary btn_submit " data-bs-toggle="modal"
+            data-bs-target="#btn-submit">Submit</button>
+
+    </form>
+    <div class="result_box">
+        {{#if Rresult}}
+                <p class="title_result">You have diabete</p>
+                <p class="title_result">That's about {{this.result2}} %</p>
+        {{else}}
+                <p class="title_result">You do not have diabete</p>
+                <p class="title_result">That's about {{subtr 100 this.result2}} %</p>
+        {{/if}}
+    </div>
+
+
+</div>
